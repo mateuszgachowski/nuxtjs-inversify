@@ -1,4 +1,5 @@
 export default {
+  mode: 'universal',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'frontend',
@@ -32,9 +33,11 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    'nuxt-ioc'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -49,7 +52,7 @@ export default {
 
   render: {
     bundleRenderer: {
-      runInNewContext: false
-    }
-  }
+      runInNewContext: false,
+    },
+  },
 }
